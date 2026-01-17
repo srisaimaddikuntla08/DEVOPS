@@ -1,0 +1,23 @@
+
+
+services:
+  app-n:
+    build: ./node
+    ports:
+      - "3000:3000"
+    environment:
+      - ENV=srisai
+
+  app-s:
+    build: ./springboot/hello-spring
+    ports:
+      - "3000:3000"
+  
+  app-p:
+    build: ./python
+    ports:
+      - "3000:3000"
+
+    
+  
+  
