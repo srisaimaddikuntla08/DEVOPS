@@ -1,0 +1,16 @@
+services:
+
+  service-a:
+    build: ./service-a
+    ports:
+      - "4001:3000"
+    environment:
+      - TAX_SERVICE_URL=http://service-b:4000
+    depends_on:
+      - service-b
+
+
+  service-b:
+    build: ./service-
+    ports:
+      - "4002:4000"
